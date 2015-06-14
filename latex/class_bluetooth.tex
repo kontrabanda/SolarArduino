@@ -1,0 +1,356 @@
+\hypertarget{class_bluetooth}{}\section{Bluetooth Class Reference}
+\label{class_bluetooth}\index{Bluetooth@{Bluetooth}}
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+\hypertarget{class_bluetooth_a536240e6a8686ee703909e464ec0d6a3}{}enum \hyperlink{class_bluetooth_a536240e6a8686ee703909e464ec0d6a3}{values\+Types} \{ \\*
+{\bfseries A\+C\+C\+E\+L\+E\+R\+A\+T\+I\+O\+N}, 
+{\bfseries A\+N\+G\+L\+E}, 
+{\bfseries B\+A\+T\+T\+E\+R\+Y\+\_\+\+V\+O\+L\+T\+A\+G\+E}, 
+{\bfseries B\+A\+T\+T\+E\+R\+Y\+\_\+\+C\+U\+R\+R\+E\+N\+T}, 
+\\*
+{\bfseries S\+O\+L\+A\+R\+\_\+\+V\+O\+L\+T\+A\+G\+E}, 
+{\bfseries E\+N\+G\+I\+N\+E\+\_\+\+P\+O\+W\+E\+R}
+ \}\label{class_bluetooth_a536240e6a8686ee703909e464ec0d6a3}
+
+\begin{DoxyCompactList}\small\item\em The values\+Types enum -\/ enumeracja symbolizująca odpowiednie typy przesyłanych wartości. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_bluetooth_a04d5a5f8b3c2773f274d712d0bd0dea3}{getrx\+Pin} ()
+\begin{DoxyCompactList}\small\item\em Pobranie aktulnego pinu R\+X. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_a88dc0bc98a60c8324ec92d3907d861b5}{setrx\+Pin} (int rx)
+\begin{DoxyCompactList}\small\item\em Ustawienie aktualnego pinu R\+X. \end{DoxyCompactList}\item 
+int \hyperlink{class_bluetooth_a6d0fbc3a8743c7c5e0b34695cfe423bf}{gettx\+Pin} ()
+\begin{DoxyCompactList}\small\item\em Pobranie aktualnego pinu T\+X. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_ac03e5ebe6e6044439710169b72c9c934}{settx\+Pin} (int tx)
+\begin{DoxyCompactList}\small\item\em Ustawienie aktualnego pinu T\+X. \end{DoxyCompactList}\item 
+\hypertarget{class_bluetooth_a1dfe29bb00c47c326fd25c5d793f52e8}{}void \hyperlink{class_bluetooth_a1dfe29bb00c47c326fd25c5d793f52e8}{setup\+Bluetooth} ()\label{class_bluetooth_a1dfe29bb00c47c326fd25c5d793f52e8}
+
+\begin{DoxyCompactList}\small\item\em Funkcja konfigurująca połączenie bluetooth. \end{DoxyCompactList}\item 
+\hyperlink{class_bluetooth_a2b16cce352d8272696d00d50ec408ba2}{Bluetooth} (char name\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący obiekt. \end{DoxyCompactList}\item 
+\hyperlink{class_bluetooth_a8dec42f3f70d912ae6d58c1b3700f739}{Bluetooth} (char name\mbox{[}$\,$\mbox{]}, int r, int t)
+\begin{DoxyCompactList}\small\item\em Konstruktor tworzący obiekt, pozwalający zdefiniować pin R\+X i T\+X. \end{DoxyCompactList}\item 
+String \hyperlink{class_bluetooth_abcd247762699faf427b70f515ab01520}{Read} ()
+\begin{DoxyCompactList}\small\item\em Funkcja pozwalająca na odczytywanie danych z \hyperlink{class_bluetooth}{Bluetooth} (na nas użytek narazie nie potrzebna) \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_a13527db977e5a6086a83a83343eda885}{Send} (char c\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Bardzo podstawowa funkcja do wysyłania. Służy raczej do konfiguracji i debugowania. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{class_bluetooth_a962e80ae56550f97cfb6c909b945abd3}{get\+Name} ()
+\begin{DoxyCompactList}\small\item\em Funckja do pobierania nazwy urządzenia (nieużywana) \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_a282df2e1ef793b0b8cab4b217e86e69e}{set\+Name} (char c\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Funkcja do ustawiania nazwy urządzenia (nieużywana) \end{DoxyCompactList}\item 
+\hypertarget{class_bluetooth_aa0ef2bbac247bdce9b45067fb3a9cbcd}{}void {\bfseries Send\+To} (char c)\label{class_bluetooth_aa0ef2bbac247bdce9b45067fb3a9cbcd}
+
+\item 
+\hypertarget{class_bluetooth_abb184c4dc820af7a3029376bb41b6575}{}char {\bfseries Read\+From} ()\label{class_bluetooth_abb184c4dc820af7a3029376bb41b6575}
+
+\item 
+void \hyperlink{class_bluetooth_a84791d154c8d7527504155c9300db02e}{Send\+Information} (const char inf\mbox{[}$\,$\mbox{]}, int n, \hyperlink{class_bluetooth_a536240e6a8686ee703909e464ec0d6a3}{values\+Types} type)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania informacji poprzez bluetooth (format informacji\+: values\+Type$\vert$inf\# np\+: 1$\vert$12.334$\vert$232.32$\vert$342.4\# -\/ służy do przesłania kątu o odpowiednich wartościach) \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_abb81f14b6e9cf222d4483208c509bf47}{Send\+Acceleration} (int inf)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania przyspieszenia. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_ad969649c0fb2bbc0d0e10dc13097adc1}{Send\+Angle} (float inf\+\_\+x, float inf\+\_\+y, float inf\+\_\+z)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania kątów. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_acd8e91ec4fef6c316360af35ade48c16}{Send\+Battery\+Voltage} (float inf)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania napięcia na baterii. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_aeffcdd4686fd61b19980e6f94a5b3e3c}{Send\+Battery\+Current} (float inf)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania natężenia na baterii. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_af03fcaf2971e2257e1b355cc2e2b6eeb}{Send\+Solar\+Voltage} (float inf)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania napięcia na ogniwach. \end{DoxyCompactList}\item 
+void \hyperlink{class_bluetooth_a84e34a80fdd89f30d2ffc698ea407453}{Send\+Engine\+Power} (int inf)
+\begin{DoxyCompactList}\small\item\em Funkcja do wysyłania mocy silnika. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_bluetooth_a2b16cce352d8272696d00d50ec408ba2}{}\index{Bluetooth@{Bluetooth}!Bluetooth@{Bluetooth}}
+\index{Bluetooth@{Bluetooth}!Bluetooth@{Bluetooth}}
+\subsubsection[{Bluetooth}]{\setlength{\rightskip}{0pt plus 5cm}Bluetooth\+::\+Bluetooth (
+\begin{DoxyParamCaption}
+\item[{char}]{name\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a2b16cce352d8272696d00d50ec408ba2}
+
+
+Konstruktor tworzący obiekt. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ nazwa urządzenie (tak naprawdę może być cokolwiek) \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_a8dec42f3f70d912ae6d58c1b3700f739}{}\index{Bluetooth@{Bluetooth}!Bluetooth@{Bluetooth}}
+\index{Bluetooth@{Bluetooth}!Bluetooth@{Bluetooth}}
+\subsubsection[{Bluetooth}]{\setlength{\rightskip}{0pt plus 5cm}Bluetooth\+::\+Bluetooth (
+\begin{DoxyParamCaption}
+\item[{char}]{name\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{r, }
+\item[{int}]{t}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a8dec42f3f70d912ae6d58c1b3700f739}
+
+
+Konstruktor tworzący obiekt, pozwalający zdefiniować pin R\+X i T\+X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & -\/ nazwa urządzenie (tak naprawdę może być cokolwiek) \\
+\hline
+{\em r} & -\/ pin rx \\
+\hline
+{\em t} & -\/ pin tx \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_bluetooth_a962e80ae56550f97cfb6c909b945abd3}{}\index{Bluetooth@{Bluetooth}!get\+Name@{get\+Name}}
+\index{get\+Name@{get\+Name}!Bluetooth@{Bluetooth}}
+\subsubsection[{get\+Name}]{\setlength{\rightskip}{0pt plus 5cm}char $\ast$ Bluetooth\+::get\+Name (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a962e80ae56550f97cfb6c909b945abd3}
+
+
+Funckja do pobierania nazwy urządzenia (nieużywana) 
+
+\begin{DoxyReturn}{Returns}
+Zwraca aktualną nazwę urządzenia 
+\end{DoxyReturn}
+\hypertarget{class_bluetooth_a04d5a5f8b3c2773f274d712d0bd0dea3}{}\index{Bluetooth@{Bluetooth}!getrx\+Pin@{getrx\+Pin}}
+\index{getrx\+Pin@{getrx\+Pin}!Bluetooth@{Bluetooth}}
+\subsubsection[{getrx\+Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Bluetooth\+::getrx\+Pin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a04d5a5f8b3c2773f274d712d0bd0dea3}
+
+
+Pobranie aktulnego pinu R\+X. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_bluetooth_a6d0fbc3a8743c7c5e0b34695cfe423bf}{}\index{Bluetooth@{Bluetooth}!gettx\+Pin@{gettx\+Pin}}
+\index{gettx\+Pin@{gettx\+Pin}!Bluetooth@{Bluetooth}}
+\subsubsection[{gettx\+Pin}]{\setlength{\rightskip}{0pt plus 5cm}int Bluetooth\+::gettx\+Pin (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a6d0fbc3a8743c7c5e0b34695cfe423bf}
+
+
+Pobranie aktualnego pinu T\+X. 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+\hypertarget{class_bluetooth_abcd247762699faf427b70f515ab01520}{}\index{Bluetooth@{Bluetooth}!Read@{Read}}
+\index{Read@{Read}!Bluetooth@{Bluetooth}}
+\subsubsection[{Read}]{\setlength{\rightskip}{0pt plus 5cm}String Bluetooth\+::\+Read (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_abcd247762699faf427b70f515ab01520}
+
+
+Funkcja pozwalająca na odczytywanie danych z \hyperlink{class_bluetooth}{Bluetooth} (na nas użytek narazie nie potrzebna) 
+
+\begin{DoxyReturn}{Returns}
+String z wiadomością 
+\end{DoxyReturn}
+\hypertarget{class_bluetooth_a13527db977e5a6086a83a83343eda885}{}\index{Bluetooth@{Bluetooth}!Send@{Send}}
+\index{Send@{Send}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send (
+\begin{DoxyParamCaption}
+\item[{char}]{c\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a13527db977e5a6086a83a83343eda885}
+
+
+Bardzo podstawowa funkcja do wysyłania. Służy raczej do konfiguracji i debugowania. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ informacje do wysłaania \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_abb81f14b6e9cf222d4483208c509bf47}{}\index{Bluetooth@{Bluetooth}!Send\+Acceleration@{Send\+Acceleration}}
+\index{Send\+Acceleration@{Send\+Acceleration}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Acceleration}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Acceleration (
+\begin{DoxyParamCaption}
+\item[{int}]{inf}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_abb81f14b6e9cf222d4483208c509bf47}
+
+
+Funkcja do wysyłania przyspieszenia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ przyspieszenie \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_ad969649c0fb2bbc0d0e10dc13097adc1}{}\index{Bluetooth@{Bluetooth}!Send\+Angle@{Send\+Angle}}
+\index{Send\+Angle@{Send\+Angle}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Angle (
+\begin{DoxyParamCaption}
+\item[{float}]{inf\+\_\+x, }
+\item[{float}]{inf\+\_\+y, }
+\item[{float}]{inf\+\_\+z}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_ad969649c0fb2bbc0d0e10dc13097adc1}
+
+
+Funkcja do wysyłania kątów. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf\+\_\+x} & -\/ kąt x \\
+\hline
+{\em inf\+\_\+y} & -\/ kąt y \\
+\hline
+{\em inf\+\_\+z} & -\/ kąt z \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_aeffcdd4686fd61b19980e6f94a5b3e3c}{}\index{Bluetooth@{Bluetooth}!Send\+Battery\+Current@{Send\+Battery\+Current}}
+\index{Send\+Battery\+Current@{Send\+Battery\+Current}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Battery\+Current}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Battery\+Current (
+\begin{DoxyParamCaption}
+\item[{float}]{inf}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_aeffcdd4686fd61b19980e6f94a5b3e3c}
+
+
+Funkcja do wysyłania natężenia na baterii. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ natężenie na baterii \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_acd8e91ec4fef6c316360af35ade48c16}{}\index{Bluetooth@{Bluetooth}!Send\+Battery\+Voltage@{Send\+Battery\+Voltage}}
+\index{Send\+Battery\+Voltage@{Send\+Battery\+Voltage}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Battery\+Voltage}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Battery\+Voltage (
+\begin{DoxyParamCaption}
+\item[{float}]{inf}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_acd8e91ec4fef6c316360af35ade48c16}
+
+
+Funkcja do wysyłania napięcia na baterii. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ napięcie na baterii \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_a84e34a80fdd89f30d2ffc698ea407453}{}\index{Bluetooth@{Bluetooth}!Send\+Engine\+Power@{Send\+Engine\+Power}}
+\index{Send\+Engine\+Power@{Send\+Engine\+Power}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Engine\+Power}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Engine\+Power (
+\begin{DoxyParamCaption}
+\item[{int}]{inf}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a84e34a80fdd89f30d2ffc698ea407453}
+
+
+Funkcja do wysyłania mocy silnika. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ moc silnika \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_a84791d154c8d7527504155c9300db02e}{}\index{Bluetooth@{Bluetooth}!Send\+Information@{Send\+Information}}
+\index{Send\+Information@{Send\+Information}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Information}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Information (
+\begin{DoxyParamCaption}
+\item[{const char}]{inf\mbox{[}$\,$\mbox{]}, }
+\item[{int}]{n, }
+\item[{{\bf values\+Types}}]{type}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a84791d154c8d7527504155c9300db02e}
+
+
+Funkcja do wysyłania informacji poprzez bluetooth (format informacji\+: values\+Type$\vert$inf\# np\+: 1$\vert$12.334$\vert$232.32$\vert$342.4\# -\/ służy do przesłania kątu o odpowiednich wartościach) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ informacja do przesłania kolejne wartości w tablicy to parametry \\
+\hline
+{\em n} & -\/ ilość parametrów do przesłania \\
+\hline
+{\em type} & -\/ typ wiadomości \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_af03fcaf2971e2257e1b355cc2e2b6eeb}{}\index{Bluetooth@{Bluetooth}!Send\+Solar\+Voltage@{Send\+Solar\+Voltage}}
+\index{Send\+Solar\+Voltage@{Send\+Solar\+Voltage}!Bluetooth@{Bluetooth}}
+\subsubsection[{Send\+Solar\+Voltage}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::\+Send\+Solar\+Voltage (
+\begin{DoxyParamCaption}
+\item[{float}]{inf}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_af03fcaf2971e2257e1b355cc2e2b6eeb}
+
+
+Funkcja do wysyłania napięcia na ogniwach. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em inf} & -\/ napięcie na ogniwach \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_a282df2e1ef793b0b8cab4b217e86e69e}{}\index{Bluetooth@{Bluetooth}!set\+Name@{set\+Name}}
+\index{set\+Name@{set\+Name}!Bluetooth@{Bluetooth}}
+\subsubsection[{set\+Name}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::set\+Name (
+\begin{DoxyParamCaption}
+\item[{char}]{c\mbox{[}$\,$\mbox{]}}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a282df2e1ef793b0b8cab4b217e86e69e}
+
+
+Funkcja do ustawiania nazwy urządzenia (nieużywana) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & -\/ nowa nazwa urzadzenia \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_a88dc0bc98a60c8324ec92d3907d861b5}{}\index{Bluetooth@{Bluetooth}!setrx\+Pin@{setrx\+Pin}}
+\index{setrx\+Pin@{setrx\+Pin}!Bluetooth@{Bluetooth}}
+\subsubsection[{setrx\+Pin}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::setrx\+Pin (
+\begin{DoxyParamCaption}
+\item[{int}]{rx}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_a88dc0bc98a60c8324ec92d3907d861b5}
+
+
+Ustawienie aktualnego pinu R\+X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em rx} & -\/ nowy pin R\+X \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_bluetooth_ac03e5ebe6e6044439710169b72c9c934}{}\index{Bluetooth@{Bluetooth}!settx\+Pin@{settx\+Pin}}
+\index{settx\+Pin@{settx\+Pin}!Bluetooth@{Bluetooth}}
+\subsubsection[{settx\+Pin}]{\setlength{\rightskip}{0pt plus 5cm}void Bluetooth\+::settx\+Pin (
+\begin{DoxyParamCaption}
+\item[{int}]{tx}
+\end{DoxyParamCaption}
+)}\label{class_bluetooth_ac03e5ebe6e6044439710169b72c9c934}
+
+
+Ustawienie aktualnego pinu T\+X. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tx} & -\/ nowy pin T\+X \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bluetooth.\+h\item 
+bluetooth.\+cpp\end{DoxyCompactItemize}
